@@ -26,9 +26,6 @@ steps:
       containerRegistry: '$(containerRegistry)'
       repository: '$(imageName)'
       tags: |
-       ${{format('build-{0}', '$(Build.BuildNumber)')}}
-       ${{format('amlsdk-{0}', '$(amlsdkversion)')}}
-       ${{format('release-{0}', '$(githubrelease)')}}  
-       latest
+       tcare-test
       buildContext: '$(Build.SourcesDirectory)' 
       dockerFile: '$(Build.SourcesDirectory)/environment_setup/Dockerfile'
